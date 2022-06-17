@@ -16,7 +16,7 @@ function register(){
     if(!password.value)
         return alert("비밀번호를 입력해주세요.");
         
-    if(password !== confirmPassword)
+    if(password.value !== confirmPassword.value)
         return alert("비밀번호가 일치하지 않습니다.");
 
     const req = {
@@ -41,6 +41,6 @@ function register(){
         }
     })
     .catch((err) => {
-        console.error(new Error("로그인 중 에러 발생"));
+        console.error(new "로그인 중 에러 발생");
     });
 }
